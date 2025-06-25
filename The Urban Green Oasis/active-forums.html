@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Forums - The Urban Green Oasis Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Re-use essential styles from your index.html's <style> block or a common CSS file */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7;
+            padding-top: 80px; /* To account for sticky header if you include one */
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #283618;
+            margin-bottom: 0.5em;
+        }
+        h1 { font-size: 3em; color: #3a5a40; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 1.5em; border-bottom: 2px solid #e0e9e4; padding-bottom: 10px; }
+        h3 { font-size: 1.5em; color: #588157; margin-top: 1em;}
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-weight: 600;
+            color: #3a5a40;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #588157;
+        }
+        .forum-category {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .forum-category:last-child {
+            margin-bottom: 0;
+        }
+        .forum-category ul {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .forum-category ul li {
+            padding: 10px 0;
+            border-bottom: 1px dotted #e0e9e4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .forum-category ul li:last-child {
+            border-bottom: none;
+        }
+        .forum-category ul li a {
+            color: #3a5a40;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .forum-category ul li a:hover {
+            color: #588157;
+        }
+        .forum-category ul li i {
+            color: #588157;
+            font-size: 1.2em;
+        }
+        .forum-description {
+            font-size: 0.9em;
+            color: #666;
+            margin-left: 30px; /* Aligns with icon */
+            margin-top: 5px;
+        }
+        .new-thread-button {
+            display: inline-block;
+            background-color: #3a5a40;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .new-thread-button:hover {
+            background-color: #588157;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-comments"></i> Active Forums</h1>
+        <p class="text-center">Welcome to our community forums! Discuss planting tips, troubleshoot issues, share your successes, and find inspiration for your urban green oasis.</p>
+
+        <div class="forum-category">
+            <h2>1. General Discussions</h2>
+            <p>A place for all general chatter, introductions, and anything that doesn't fit elsewhere.</p>
+            <ul>
+                <li><i class="fas fa-leaf"></i> <a href="#">Introduce Yourself!</a> <span class="forum-description">New to the community? Say hello here!</span></li>
+                <li><i class="fas fa-question-circle"></i> <a href="#">General Gardening Questions</a> <span class="forum-description">Ask anything about urban gardening.</span></li>
+                <li><i class="fas fa-seedling"></i> <a href="#">Your Latest Plant Project</a> <span class="forum-description">Share what you're currently working on.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>2. Plant Identification & Care</h2>
+            <p>Need help identifying a plant? Or struggling with specific plant care? This is the spot!</p>
+            <ul>
+                <li><i class="fas fa-camera"></i> <a href="#">Identify My Plant!</a> <span class="forum-description">Post photos and get help recognizing your plants.</span></li>
+                <li><i class="fas fa-lightbulb"></i> <a href="#">Troubleshooting Plant Problems</a> <span class="forum-description">Leaves yellowing? Pests? Get solutions here.</span></li>
+                <li><i class="fas fa-sun"></i> <a href="#">Light & Watering Needs</a> <span class="forum-description">Discuss optimal conditions for different plants.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>3. Pest & Disease Control</h2>
+            <p>Battling unwelcome visitors or plant ailments? Share tips and ask for advice.</p>
+            <ul>
+                <li><i class="fas fa-bug"></i> <a href="#">Natural Pest Remedies</a> <span class="forum-description">Share your organic solutions for common pests.</span></li>
+                <li><i class="fas fa-microscope"></i> <a href="#">Disease Diagnosis & Treatment</a> <span class="forum-description">Help identifying and treating plant diseases.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>4. DIY Projects & Upcycling</h2>
+            <p>From recycled planters to homemade trellises, share your creative DIY gardening solutions.</p>
+            <ul>
+                <li><i class="fas fa-hand-scissors"></i> <a href="#">Recycled Planter Ideas</a> <span class="forum-description">Show off your bottle planters, tire gardens, etc.</span></li>
+                <li><i class="fas fa-hammer"></i> <a href="#">Build Your Own Compost Bin</a> <span class="forum-description">Tips and tricks for DIY composting.</span></li>
+                <li><i class="fas fa-tools"></i> <a href="#">Vertical Garden Innovations</a> <span class="forum-description">Share your designs and experiences with vertical setups.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>5. Plant Guides Discussion</h2>
+            <p>Discuss the specific guides on our site: Aloe Vera, Curry Leaf, Hibiscus, Jade, Easy Herbs, and more!</p>
+            <ul>
+                <li><i class="fas fa-book-open"></i> <a href="#">Aloe Vera Plant Care</a> <span class="forum-description">Questions and tips for growing Aloe Vera.</span></li>
+                <li><i class="fas fa-book-open"></i> <a href="#">Curry Leaf Plant Enthusiasts</a> <span class="forum-description">Share your experiences with growing curry leaves.</span></li>
+                <li><i class="fas fa-book-open"></i> <a href="#">Hibiscus Growing Tips</a> <span class="forum-description">Discuss optimal conditions for vibrant hibiscus blooms.</span></li>
+                <li><i class="fas fa-book-open"></i> <a href="#">Jade Plant Propagation & Care</a> <span class="forum-description">Share your success with jade plant cuttings.</span></li>
+                <li><i class="fas fa-book-open"></i> <a href="#">Easy Herbs for Beginners</a> <span class="forum-description">What are your go-to easy-to-grow herbs?</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>6. Seed Starting & Propagation</h2>
+            <p>From tiny seeds to new cuttings, learn and share methods for expanding your plant collection.</p>
+            <ul>
+                <li><i class="fas fa-seedling"></i> <a href="#">Best Seed Starting Mixes</a> <span class="forum-description">Discuss soil, light, and humidity for seeds.</span></li>
+                <li><i class="fas fa-cut"></i> <a href="#">Cuttings & Rooting Hormones</a> <span class="forum-description">Share your success stories with plant propagation.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>7. Soil & Fertilization</h2>
+            <p>Everything about the foundation of healthy plants: soil types, nutrients, and feeding schedules.</p>
+            <ul>
+                <li><i class="fas fa-flask"></i> <a href="#">Understanding Potting Mixes</a> <span class="forum-description">What makes a good soil for different plants?</span></li>
+                <li><i class="fas fa-vial"></i> <a href="#">Organic vs. Chemical Fertilizers</a> <span class="forum-description">Pros and cons, and application tips.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>8. Watering Techniques</h2>
+            <p>Overwatering, underwatering, signs to look for, and effective watering practices.</p>
+            <ul>
+                <li><i class="fas fa-tint"></i> <a href="#">When and How Much to Water?</a> <span class="forum-description">Discuss schedules and signs of thirst.</span></li>
+                <li><i class="fas fa-cloud-rain"></i> <a href="#">Rainwater Harvesting Tips</a> <span class="forum-description">Collecting and using rainwater for your plants.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>9. Balcony & Small Space Gardening</h2>
+            <p>Maximize your green space! Ideas for container gardening, vertical setups, and optimizing yield in tight spots.</p>
+            <ul>
+                <li><i class="fas fa-city"></i> <a href="#">Balcony Garden Design Ideas</a> <span class="forum-description">Share photos and layouts of your urban oasis.</span></li>
+                <li><i class="fas fa-ruler-combined"></i> <a href="#">Space-Saving Plant Varieties</a> <span class="forum-description">Compact plants perfect for small areas.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>10. Success Stories & Show-Offs</h2>
+            <p>Celebrate your green thumb! Share photos of your thriving plants, bountiful harvests, and beautiful garden setups.</p>
+            <ul>
+                <li><i class="fas fa-award"></i> <a href="#">My Thriving Plants!</a> <span class="forum-description">Show off your healthy plants.</span></li>
+                <li><i class="fas fa-shopping-basket"></i> <a href="#">Harvest Haul Photos</a> <span class="forum-description">Proud of your harvest? Share it here!</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>11. Events & Meetups</h2>
+            <p>Local plant swaps, workshops, and community gardening events.</p>
+            <ul>
+                <li><i class="fas fa-calendar-alt"></i> <a href="#">Upcoming Plant Swaps</a> <span class="forum-description">Find or organize local plant exchange events.</span></li>
+                <li><i class="fas fa-users"></i> <a href="#">Virtual Gardening Workshops</a> <span class="forum-description">Share links to online learning opportunities.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>12. Tools & Gadgets</h2>
+            <p>Discuss the best gardening tools, smart devices, and accessories for urban gardeners.</p>
+            <ul>
+                <li><i class="fas fa-screwdriver"></i> <a href="#">Favorite Gardening Tools</a> <span class="forum-description">What tools can't you live without?</span></li>
+                <li><i class="fas fa-robot"></i> <a href="#">Smart Gardening Tech</a> <span class="forum-description">Automated watering systems, grow lights, etc.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>13. Climate & Seasonal Gardening</h2>
+            <p>Tips for adapting your gardening practices to different climates and seasons.</p>
+            <ul>
+                <li><i class="fas fa-snowflake"></i> <a href="#">Winter Gardening Challenges</a> <span class="forum-description">Protecting plants from cold.</span></li>
+                <li><i class="fas fa-cloud-sun"></i> <a href="#">Monsoon Gardening Tips</a> <span class="forum-description">Best practices for wet seasons.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>14. Herbs & Spices (Specific)</h2>
+            <p>Dedicated discussions for your favorite culinary herbs and spices.</p>
+            <ul>
+                <li><i class="fas fa-pepper-hot"></i> <a href="#">Chili Plant Care</a> <span class="forum-description">Tips for growing various chili varieties.</span></li>
+                <li><i class="fas fa-lemon"></i> <a href="#">Growing Citrus in Pots</a> <span class="forum-description">Lemon, lime, and orange tree care in containers.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <div class="forum-category">
+            <h2>15. Feedback & Site Suggestions</h2>
+            <p>Help us improve The Urban Green Oasis!</p>
+            <ul>
+                <li><i class="fas fa-lightbulb"></i> <a href="#">Website Feature Requests</a> <span class="forum-description">Ideas for new content or features.</span></li>
+                <li><i class="fas fa-bug"></i> <a href="#">Report a Bug</a> <span class="forum-description">Found an issue on the site? Let us know.</span></li>
+            </ul>
+            <a href="#" class="new-thread-button"><i class="fas fa-plus-circle"></i> Start New Thread</a>
+        </div>
+
+        <a href="index.html#community" class="back-link"><i class="fas fa-arrow-left"></i> Back to Community Hub</a>
+    </div>
+</body>
+</html>

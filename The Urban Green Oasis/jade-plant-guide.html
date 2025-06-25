@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jade Plant Guide - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght%700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styles (copied for consistency) */
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background-color: #f7fdf7; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #283618; margin-bottom: 0.5em; }
+        h1 { font-size: 3em; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        ol { list-style: decimal; margin-left: 20px; margin-bottom: 1em; }
+        .plant-hero {
+            background: url('https://via.placeholder.com/1200x400/808B96/ffffff?text=Jade+Plant') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .plant-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .plant-hero h1 {
+            color: #fff;
+            font-size: 3.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .guide-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .guide-section:last-of-type {
+            border-bottom: none;
+        }
+        .key-facts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #e0e9e4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .key-fact-item {
+            flex: 1 1 180px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .key-fact-item i {
+            font-size: 2em;
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+        .key-fact-item h4 {
+            color: #3a5a40;
+            margin-bottom: 5px;
+        }
+        .main-header { /* Copy header styles as needed */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        .main-footer {
+            background-color: #283618;
+            color: #e0e9e4;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            color: #a3b18a;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .plant-hero h1 { font-size: 2.5em; }
+            h1 { font-size: 2.5em; }
+            .key-facts { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#guides">Plant Guides</a></li>
+                    <li><a href="index.html#diy">DIY Projects</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="plant-hero" style="background-image: url('https://via.placeholder.com/1200x400/808B96/ffffff?text=Jade+Plant');">
+            <h1>Jade Plant Guide</h1>
+        </section>
+
+        <div class="container section-padding">
+            <div class="key-facts">
+                <div class="key-fact-item">
+                    <i class="fas fa-sun"></i>
+                    <h4>Light Needs</h4>
+                    <p>Bright Direct to Indirect Light</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tint"></i>
+                    <h4>Watering</h4>
+                    <p>Low (Drought Tolerant)</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Difficulty</h4>
+                    <p>Easy</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tree"></i>
+                    <h4>Growth Habit</h4>
+                    <p>Succulent Shrub/Small Tree</p>
+                </div>
+            </div>
+
+            <section class="guide-section">
+                <h2>1. Introduction to Jade Plant</h2>
+                <p>The Jade Plant (Crassula ovata) is a popular succulent known for its thick, woody stems and fleshy, oval-shaped leaves. Often referred to as the "money plant" or "lucky plant," it's a symbol of good luck and prosperity in many cultures, making it a common housewarming gift. Its tree-like appearance and ease of care make it an excellent choice for both beginners and experienced plant enthusiasts.</p>
+                <p>Native to South Africa, Jade Plants are incredibly resilient and can live for decades with proper care, often passed down through generations.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>2. Planting and Potting</h2>
+                <h3>Choosing the Right Pot:</h3>
+                <ul>
+                    <li>Jade Plants prefer terracotta pots or unglazed ceramic pots, as these materials allow for better evaporation and air circulation to the roots.</li>
+                    <li>Choose a pot that is only slightly larger than the plant's root ball. They prefer to be a bit root-bound.</li>
+                    <li>**Crucially, the pot MUST have drainage holes** to prevent waterlogging, which is fatal for succulents.</li>
+                </ul>
+                <h3>Soil Requirements:</h3>
+                <ul>
+                    <li>The most important factor for Jade Plants is extremely well-draining soil.</li>
+                    <li>Use a pre-made succulent or cactus potting mix. Alternatively, you can mix regular potting soil with perlite, coarse sand, or pumice in a 1:1 ratio to ensure excellent drainage.</li>
+                </ul>
+                <h3>Planting Process:</h3>
+                <ol>
+                    <li>Carefully remove the plant from its nursery container. If the roots are very compact, gently loosen them.</li>
+                    <li>Place a layer of well-draining soil at the bottom of the new pot. Center the plant and backfill with soil, ensuring the top of the root ball is level with the soil surface.</li>
+                    <li>Avoid burying the stem too deep.</li>
+                    <li>Do not water immediately after potting. Wait a few days to a week to allow the plant to settle and any damaged roots to heal, reducing the risk of rot.</li>
+                </ol>
+            </section>
+
+            <section class="guide-section">
+                <h2>3. Essential Care & Maintenance</h2>
+                <h3>Watering:</h3>
+                <p>**The biggest mistake with Jade Plants is overwatering.** Allow the soil to completely dry out between waterings. In fact, err on the side of underwatering rather than overwatering. Stick your finger into the soil; if the top 2-3 inches are dry, it's time to water. This might mean watering every 2-4 weeks, or even less frequently in winter when the plant is dormant. Reduce watering significantly in cooler months.</p>
+                <h3>Light:</h3>
+                <p>Jade Plants thrive in bright light, including several hours of direct sunlight per day. A south-facing window is ideal. In insufficient light, the plant may become leggy, and its leaves might not develop the characteristic reddish tint on the edges.</p>
+                <h3>Temperature & Humidity:</h3>
+                <p>They prefer average room temperatures between 18°C and 24°C (65°F and 75°F). Protect them from freezing temperatures. They tolerate low humidity well, making them ideal for most indoor environments.</p>
+                <h3>Fertilizing:</h3>
+                <p>Jade Plants are not heavy feeders. Fertilize sparingly, once every 2-4 months during the growing season (spring and summer), with a balanced liquid fertilizer diluted to half strength. Avoid fertilizing in fall and winter.</p>
+                <h3>Pruning:</h3>
+                <p>Pruning is beneficial for shaping the plant and encouraging bushier growth. You can prune off leggy stems or unwanted branches. This also allows you to propagate new plants from the cuttings!</p>
+                <h3>Pest and Disease Management:</h3>
+                <p>Generally robust, but watch for mealybugs, scale insects, or spider mites. Treat with insecticidal soap or by dabbing with rubbing alcohol. The most common disease issue is root rot, entirely preventable by proper watering practices.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>4. Propagation & Benefits</h2>
+                <h3>Propagation:</h3>
+                <p>Jade Plants are incredibly easy to propagate from leaf or stem cuttings. Simply break off a healthy leaf or take a stem cutting, let it "callus over" for a few days (allow the cut end to dry and form a scab), then place it on top of or slightly buried in well-draining succulent soil. Roots and new growth will eventually emerge.</p>
+                <h3>Benefits:</h3>
+                <ul>
+                    <li>**Extremely Low Maintenance:** Ideal for busy individuals or those new to plants.</li>
+                    <li>**Longevity:** Can live for many decades and grow into impressive, tree-like specimens.</li>
+                    <li>**Symbolism:** Associated with good luck, prosperity, and friendship.</li>
+                    <li>**Air Purification:** While not as potent as some other plants, they do contribute to improved indoor air quality.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

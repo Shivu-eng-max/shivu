@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* All your CSS from the <style> block in index.html goes here */
+        /* You can copy the entire <style> content from your original index.html file and paste it below */
+        /* ---------------------------------------------------------------------------------------------------- */
+        /* Basic Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7; /* A very light green/off-white */
+        }
+
+        a {
+            text-decoration: none;
+            color: #3a5a40; /* Dark green link */
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #588157; /* Lighter green on hover */
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #283618; /* Very dark green */
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 3.5em; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.8em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background-color: #e0e9e4; /* A soft, calming light green */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-description {
+            font-size: 1.1em;
+            color: #606c38; /* Muted green for descriptions */
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: #3a5a40; /* Primary green */
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #588157; /* Lighter green */
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: #a3b18a; /* Accent green */
+            color: #283618;
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+
+        .btn-secondary:hover {
+            background-color: #bac4b3;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary-outline {
+            background: none;
+            color: #3a5a40;
+            border: 2px solid #3a5a40;
+        }
+
+        .btn-primary-outline:hover {
+            background-color: #3a5a40;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Header */
+        .main-header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 30px;
+        }
+
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none; /* Hidden by default for desktop */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-toggle .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: #3a5a40;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hero Section (Not directly used in About page, but good to have common styles) */
+        .hero-section {
+            background: url('https://via.placeholder.com/1600x800/588157/ffffff?text=LUSH+BALCONY+GARDEN') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* Featured Content (Not directly used in About page, but common styles) */
+        .featured-content h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            color: #283618;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .featured-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .featured-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-item h3 {
+            padding: 20px 20px 10px;
+            color: #3a5a40;
+        }
+
+        .featured-item p {
+            padding: 0 20px 15px;
+            font-size: 0.95em;
+            color: #606c38;
+        }
+
+        .featured-item .read-more {
+            display: block;
+            padding: 15px 20px;
+            background-color: #e0e9e4;
+            color: #3a5a40;
+            font-weight: 600;
+            text-align: center;
+            border-top: 1px solid #d2dcd7;
+            transition: background-color 0.3s ease;
+        }
+
+        .featured-item .read-more:hover {
+            background-color: #d2dcd7;
+        }
+
+        /* Plant Guides (Common styles) */
+        .plant-guides h2, .plant-guides .section-description {
+            text-align: center;
+        }
+
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .plant-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .plant-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .plant-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .plant-card h3 {
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+
+        .plant-card p {
+            font-size: 0.9em;
+            color: #606c38;
+            padding: 0 20px;
+            margin-bottom: 15px;
+        }
+
+        .plant-meta {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.85em;
+            color: #588157;
+            margin-bottom: 20px;
+        }
+
+        .plant-meta i {
+            margin-right: 5px;
+            color: #3a5a40;
+        }
+
+        /* DIY Projects (Common styles) */
+        .diy-projects h2, .diy-projects .section-description {
+            text-align: center;
+        }
+
+        .diy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .diy-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .diy-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .diy-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .diy-item h3 {
+            padding: 25px 25px 10px;
+            color: #3a5a40;
+        }
+
+        .diy-item p {
+            padding: 0 25px 20px;
+            font-size: 1em;
+            color: #606c38;
+        }
+
+        .diy-item .read-more {
+            display: block;
+            padding: 18px 25px;
+            background-color: #e0e9e4;
+            color: #3a5a40;
+            font-weight: 600;
+            text-align: center;
+            border-top: 1px solid #d2dcd7;
+            transition: background-color 0.3s ease;
+        }
+
+        .diy-item .read-more:hover {
+            background-color: #d2dcd7;
+        }
+
+        /* Community Section (Common styles) */
+        .community-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .community-feature-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .community-feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .community-feature-item i {
+            color: #3a5a40;
+            margin-bottom: 20px;
+        }
+
+        .community-feature-item h3 {
+            color: #283618;
+            margin-bottom: 10px;
+        }
+
+        .community-feature-item p {
+            color: #606c38;
+            margin-bottom: 20px;
+        }
+
+        /* Newsletter Section (Common styles) */
+        .newsletter-section {
+            background-color: #606c38; /* A darker, rich green */
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .newsletter-section h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-section .section-description {
+            color: #e0e9e4;
+            margin-bottom: 40px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .newsletter-form input[type="email"] {
+            flex-grow: 1;
+            padding: 15px 25px;
+            border: none;
+            font-size: 1.1em;
+            outline: none;
+            border-radius: 50px 0 0 50px; /* Rounded left */
+        }
+
+        .newsletter-form button {
+            background-color: #283618; /* Even darker green */
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 0 50px 50px 0; /* Rounded right */
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #3a5a40;
+        }
+
+        /* Footer (Common styles) */
+        .main-footer {
+            background-color: #283618; /* Darkest green */
+            color: #e0e9e4;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #a3b18a; /* Accent green for headings */
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .footer-col p, .footer-col ul {
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li a {
+            color: #e0e9e4;
+            padding: 5px 0;
+            display: inline-block;
+        }
+
+        .footer-col ul li a:hover {
+            color: #588157;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            color: #e0e9e4;
+            font-size: 1.5em;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #588157;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            color: #a3b18a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3.5em;
+            }
+            .hero-content p {
+                font-size: 1.3em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                position: absolute;
+                top: 80px;
+                left: 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+
+            .main-nav ul.active {
+                display: flex;
+            }
+
+            .main-nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .main-nav a {
+                padding: 10px 0;
+                display: block;
+                font-size: 1.1em;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8em;
+            }
+            .hero-content p {
+                font-size: 1.1em;
+            }
+
+            .featured-grid, .plant-grid, .diy-grid, .community-features {
+                grid-template-columns: 1fr;
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                border-radius: 0;
+            }
+
+            .newsletter-form input[type="email"],
+            .newsletter-form button {
+                border-radius: 0;
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+            }
+            .newsletter-form input[type="email"] {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .hero-content p {
+                font-size: 0.9em;
+            }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+            .featured-item img, .plant-card img, .diy-item img {
+                height: 180px;
+            }
+        }
+        /* ---------------------------------------------------------------------------------------------------- */
+
+        /* Specific styles for the About page content */
+        .about-page-content {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center; /* Center align text for a clean look */
+            background-color: #fff; /* White background for the content box */
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            margin-top: 40px; /* Space from header */
+            margin-bottom: 40px; /* Space before footer */
+        }
+
+        .about-page-content h1 {
+            font-size: 3em;
+            margin-bottom: 30px;
+            color: #283618;
+        }
+
+        .about-page-content h3 {
+            margin-top: 30px;
+            color: #3a5a40;
+        }
+
+        .about-page-content p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #606c38; /* Muted green for body text */
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="about.html">About</a></li> 
+                    <li><a href="index.html#guides">Plant Guides</a></li>
+                    <li><a href="index.html#diy">DIY Projects</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-page-content">
+            <h1>About The Urban Green Oasis</h1>
+            <p>
+                Welcome to **The Urban Green Oasis**! We are a passionate community dedicated to transforming compact urban spaces into vibrant, thriving green sanctuaries. Our mission is to make gardening accessible, enjoyable, and sustainable for everyone living in cities, no matter how small their balcony, patio, or windowsill.
+            </p>
+            <p>
+                In a world where concrete often dominates, we believe in the power of plants to bring tranquility, beauty, and freshness into our daily lives. From selecting the perfect plant for your light conditions to innovative DIY projects that maximize every inch, we provide comprehensive guides, expert tips, and a supportive network to help you cultivate your personal oasis.
+            </p>
+            <h3>Our Journey</h3>
+            <p>
+                Founded in 2025, The Urban Green Oasis started with a simple idea: that urban living shouldn't mean sacrificing the joy of gardening. We noticed a growing interest in home gardening in cities but a lack of tailored resources for small spaces. Thus, this platform was born to fill that gap, connecting enthusiasts with practical advice and inspiring ideas.
+            </p>
+            <h3>What We Offer</h3>
+            <ul>
+                <li>**Detailed Plant Guides:** Information on the best plants for urban environments, including care instructions, light requirements, and watering tips.</li>
+                <li>**Creative DIY Projects:** Step-by-step tutorials for building vertical gardens, composting bins, and unique planters from recycled materials.</li>
+                <li>**Community Connection:** Forums and galleries to share your progress, ask questions, and connect with fellow urban gardeners.</li>
+                <li>**Sustainable Practices:** Emphasizing eco-friendly gardening methods, water conservation, and natural pest control.</li>
+            </ul>
+            <p>
+                Join us in cultivating a greener, healthier, and happier urban lifestyle. We are thrilled to have you as part of our ever-growing green family!
+            </p>
+            <a href="index.html" class="btn btn-primary mt-4">Back to Home <i class="fas fa-home"></i></a>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>The Urban Green Oasis</h4>
+                    <p>Cultivating joy, one plant at a time, in the heart of the city.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#guides">Plant Guides</a></li>
+                        <li><a href="index.html#diy">DIY Projects</a></li>
+                        <li><a href="index.html#community">Community</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                    navToggle.classList.toggle('open');
+                });
+
+                // This part of JS is for smooth scrolling to sections on the same page.
+                // It will NOT apply to the 'About' link as it's now a new page.
+                // For links to other sections on index.html (e.g., Plant Guides), 
+                // you'd typically handle that in index.html's JS or by linking to index.html#sectionID
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        // Only close nav if it's an internal anchor link on the same page
+                        // For links to other pages, the page reload handles it.
+                        if (navLinks.classList.contains('active') && link.getAttribute('href').startsWith('#')) {
+                            navLinks.classList.remove('active');
+                            navToggle.classList.remove('open');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>

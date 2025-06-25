@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Plants - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic styles needed for plant cards and general layout */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .section-padding {
+            padding: 80px 0;
+        }
+        .text-center {
+            text-align: center;
+        }
+        h2 {
+            font-family: 'Playfair Display', serif;
+            color: #283618;
+            font-size: 2.5em;
+            margin-bottom: 0.5em;
+        }
+        .section-description {
+            font-size: 1.1em;
+            color: #606c38;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        .plant-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .plant-card:hover {
+            transform: translateY(-5px);
+        }
+        .plant-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .plant-card h3 {
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+        .plant-card p {
+            font-size: 0.9em;
+            color: #606c38;
+            padding: 0 20px;
+            margin-bottom: 15px;
+        }
+        .plant-meta {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.85em;
+            color: #588157;
+            margin-bottom: 20px;
+        }
+        .plant-meta i {
+            margin-right: 5px;
+            color: #3a5a40;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        .btn-secondary {
+            background-color: #a3b18a;
+            color: #283618;
+            font-size: 0.9em;
+        }
+        .btn-secondary:hover {
+            background-color: #bac4b3;
+            transform: translateY(-2px);
+        }
+        .main-header { /* Copy header styles as needed */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        /* Add responsive styles as well */
+        @media (max-width: 768px) {
+            .plant-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#guides">Plant Guides</a></li>
+                    <li><a href="index.html#diy">DIY Projects</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="all-plants" class="section-padding">
+            <div class="container">
+                <h2 class="text-center">Explore All Our Plants</h2>
+                <p class="section-description text-center">A comprehensive list of plants suitable for urban gardening, with care instructions.</p>
+                <div class="plant-grid">
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/588157/ffffff?text=Tulasi" alt="Tulasi Plant">
+                        <h3>Tulasi (Holy Basil)</h3>
+                        <p>A sacred and easy-to-grow herb, perfect for sunny spots.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-sun"></i> Full Sun</span>
+                            <span><i class="fas fa-tint"></i> Moderate Water</span>
+                        </div>
+                        <a href="tulasi-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/a3b18a/ffffff?text=Money+Plant" alt="Money Plant">
+                        <h3>Money Plant (Pothos)</h3>
+                        <p>Popular for beginners, thrives indoors with minimal care.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-cloud-sun"></i> Low Light</span>
+                            <span><i class="fas fa-tint"></i> Low Water</span>
+                        </div>
+                        <a href="money-plant-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/3a5a40/ffffff?text=Hibiscus" alt="Hibiscus">
+                        <h3>Hibiscus</h3>
+                        <p>Add vibrant color to your balcony with this beautiful flowering plant.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-sun"></i> Full Sun</span>
+                            <span><i class="fas fa-tint"></i> High Water</span>
+                        </div>
+                        <a href="hibiscus-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/606c38/ffffff?text=Aloe+Vera" alt="Aloe Vera">
+                        <h3>Aloe Vera</h3>
+                        <p>A succulent known for its medicinal properties and low maintenance.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-cloud-sun"></i> Bright Indirect</span>
+                            <span><i class="fas fa-tint"></i> Low Water</span>
+                        </div>
+                        <a href="aloe-vera-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/283618/ffffff?text=Snake+Plant" alt="Snake Plant">
+                        <h3>Snake Plant (Sansevieria)</h3>
+                        <p>Air-purifying and extremely hardy, perfect for busy individuals.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-cloud"></i> Very Low Light</span>
+                            <span><i class="fas fa-tint"></i> Very Low Water</span>
+                        </div>
+                        <a href="snake-plant-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/588157/ffffff?text=Rosemary" alt="Rosemary Plant">
+                        <h3>Rosemary</h3>
+                        <p>Fragrant herb great for cooking and repelling pests.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-sun"></i> Full Sun</span>
+                            <span><i class="fas fa-tint"></i> Moderate Water</span>
+                        </div>
+                        <a href="rosemary-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/a3b18a/ffffff?text=Peace+Lily" alt="Peace Lily">
+                        <h3>Peace Lily</h3>
+                        <p>Elegant flowering plant that thrives in low light and humid conditions.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-cloud-sun"></i> Low to Medium Light</span>
+                            <span><i class="fas fa-tint"></i> Moderate Water</span>
+                        </div>
+                        <a href="peace-lily-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/3a5a40/ffffff?text=Curry+Leaf" alt="Curry Leaf Plant">
+                        <h3>Curry Leaf Plant</h3>
+                        <p>Essential for Indian cuisine, grows well in pots with proper care.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-sun"></i> Full Sun</span>
+                            <span><i class="fas fa-tint"></i> High Water</span>
+                        </div>
+                        <a href="curry-leaf-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/606c38/ffffff?text=Spider+Plant" alt="Spider Plant">
+                        <h3>Spider Plant</h3>
+                        <p>Easy to care for and produces "spiderettes" for propagation.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-cloud-sun"></i> Bright Indirect</span>
+                            <span><i class="fas fa-tint"></i> Moderate Water</span>
+                        </div>
+                        <a href="spider-plant-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/283618/ffffff?text=Jade+Plant" alt="Jade Plant">
+                        <h3>Jade Plant</h3>
+                        <p>A popular succulent believed to bring good luck, very drought-tolerant.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-sun"></i> Full Sun</span>
+                            <span><i class="fas fa-tint"></i> Low Water</span>
+                        </div>
+                        <a href="jade-plant-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>The Urban Green Oasis</h4>
+                    <p>Cultivating joy, one plant at a time, in the heart of the city.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#guides">Plant Guides</a></li>
+                        <li><a href="index.html#diy">DIY Projects</a></li>
+                        <li><a href="index.html#community">Community</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

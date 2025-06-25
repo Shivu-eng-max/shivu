@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Gallery - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Re-use essential styles from your index.html's <style> block or a common CSS file */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7;
+            padding-top: 80px; /* To account for sticky header if you include one */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #283618;
+            margin-bottom: 0.5em;
+        }
+        h1 { font-size: 3em; color: #3a5a40; text-align: center; margin-bottom: 40px; }
+        .section-description {
+            font-size: 1.1em;
+            color: #606c38;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            text-align: center;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-weight: 600;
+            color: #3a5a40;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #588157;
+        }
+
+        /* Gallery Specific Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+            gap: 20px;
+        }
+        .gallery-item {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 250px; /* Uniform height for images */
+            object-fit: cover; /* Ensures images cover the area without distortion */
+            display: block;
+        }
+        .image-caption {
+            padding: 15px;
+            font-size: 0.9em;
+            color: #588157;
+            text-align: center;
+        }
+        /* Pagination/Load More (Optional for future) */
+        .load-more-btn {
+            display: block;
+            width: fit-content;
+            margin: 60px auto 20px auto;
+            background-color: #3a5a40;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .load-more-btn:hover {
+            background-color: #588157;
+            transform: translateY(-3px);
+        }
+
+        /* You can copy your main header and footer styles here for consistency */
+        /* For simplicity, I'm omitting them in this example, but they should be included */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-camera"></i> Our Urban Garden Gallery</h1>
+        <p class="section-description">Explore a collection of inspiring urban gardens, thriving balcony setups, and beautiful plant displays from our community. Get ideas for your own green space!</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Balcony+Garden+1" alt="Lush Balcony Garden">
+                <div class="image-caption">Lush balcony oasis.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Vertical+Herb+Wall" alt="Vertical Herb Wall">
+                <div class="image-caption">Vertical herb wall in a small space.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Terrace+Farm" alt="Terrace Farm">
+                <div class="image-caption">Vibrant terrace vegetable garden.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Container+Flowers" alt="Container Flowers">
+                <div class="image-caption">Colorful flowers in patio containers.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Indoor+Jungle" alt="Indoor Jungle">
+                <div class="image-caption">Cozy indoor plant corner.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Succulent+Display" alt="Succulent Display">
+                <div class="image-caption">Artistic succulent display.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Window+Box" alt="Window Box">
+                <div class="image-caption">Charming window box garden.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=DIY+Planters" alt="DIY Planters">
+                <div class="image-caption">Creative DIY recycled planters.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Herb+Spiral" alt="Herb Spiral">
+                <div class="image-caption">Compact herb spiral garden.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Rooftop+Garden" alt="Rooftop Garden">
+                <div class="image-caption">Serene rooftop vegetable patch.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Small+Space+Edibles" alt="Small Space Edibles">
+                <div class="image-caption">Edibles thriving in small containers.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Balcony+Zen" alt="Balcony Zen Garden">
+                <div class="image-caption">Peaceful balcony zen garden.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Compact+Fruit+Trees" alt="Compact Fruit Trees">
+                <div class="image-caption">Dwarf fruit trees on a patio.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Climbing+Vines" alt="Climbing Vines">
+                <div class="image-caption">Climbing vines adding greenery.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Hydroponic+Setup" alt="Hydroponic Setup">
+                <div class="image-caption">Small-scale hydroponic system.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Fairy+Garden" alt="Fairy Garden">
+                <div class="image-caption">Whimsical miniature fairy garden.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Patio+Oasis" alt="Patio Oasis">
+                <div class="image-caption">Inviting patio with potted plants.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Upcycled+Tires" alt="Upcycled Tires">
+                <div class="image-caption">Upcycled tires used as planters.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Hanging+Baskets" alt="Hanging Baskets">
+                <div class="image-caption">Beautiful cascading hanging baskets.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Edible+Flowers" alt="Edible Flowers">
+                <div class="image-caption">Edible flowers adding color and taste.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Kitchen+Garden" alt="Kitchen Garden">
+                <div class="image-caption">Fresh herbs in a kitchen garden.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Rainwater+Collection" alt="Rainwater Collection">
+                <div class="image-caption">Compact rainwater harvesting setup.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Mini+Greenhouse" alt="Mini Greenhouse">
+                <div class="image-caption">DIY mini greenhouse for seedlings.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Artistic+Pots" alt="Artistic Pots">
+                <div class="image-caption">Hand-painted artistic pots.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Bamboo+Planters" alt="Bamboo Planters">
+                <div class="image-caption">Eco-friendly bamboo planters.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Succulent+Wall" alt="Succulent Wall">
+                <div class="image-caption">Stunning succulent living wall.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Raised+Bed+Veg" alt="Raised Bed Vegetables">
+                <div class="image-caption">Small raised bed vegetable patch.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Flowering+Vines" alt="Flowering Vines">
+                <div class="image-caption">Beautiful flowering vines.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=DIY+Trellis" alt="DIY Trellis">
+                <div class="image-caption">Homemade trellis for climbing plants.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Mini+Pond" alt="Mini Pond">
+                <div class="image-caption">Tiny water feature/mini pond.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Shade+Garden" alt="Shade Garden">
+                <div class="image-caption">Lush plants thriving in shade.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Container+Trees" alt="Container Trees">
+                <div class="image-caption">Dwarf trees in large containers.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Edible+Landscape" alt="Edible Landscape">
+                <div class="image-caption">Beautiful and edible landscape.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Compost+Corner" alt="Compost Corner">
+                <div class="image-caption">Well-maintained mini compost area.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Foliage+Display" alt="Foliage Display">
+                <div class="image-caption">Diverse foliage plant collection.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Balcony+Seating" alt="Balcony Seating">
+                <div class="image-caption">Cozy balcony with integrated seating.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Hanging+Edibles" alt="Hanging Edibles">
+                <div class="image-caption">Strawberries and herbs in hanging planters.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Cactus+Collection" alt="Cactus Collection">
+                <div class="image-caption">Unique cactus and succulent collection.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Potted+Palms" alt="Potted Palms">
+                <div class="image-caption">Elegant potted palms on a patio.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Bird+Friendly" alt="Bird Friendly Garden">
+                <div class="image-caption">Garden designed to attract birds.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=DIY+Watering" alt="DIY Watering System">
+                <div class="image-caption">Simple DIY drip irrigation system.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Indoor+Herb+Garden" alt="Indoor Herb Garden">
+                <div class="image-caption">Bright indoor herb garden setup.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Recycled+Wood" alt="Recycled Wood Planters">
+                <div class="image-caption">Planters made from recycled wood.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Container+Citrus" alt="Container Citrus">
+                <div class="image-caption">Fruiting citrus in a container.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Microgreens" alt="Microgreens Setup">
+                <div class="image-caption">Indoor microgreens growing setup.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/a3b18a/ffffff?text=Pollinator+Garden" alt="Pollinator Garden">
+                <div class="image-caption">Flowers attracting pollinators.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/588157/ffffff?text=Upcycled+Furniture" alt="Upcycled Furniture Garden">
+                <div class="image-caption">Garden incorporating upcycled furniture.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/3a5a40/ffffff?text=Small+Fruit+Bushes" alt="Small Fruit Bushes">
+                <div class="image-caption">Berries growing in compact bushes.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Succulent+Terrarium" alt="Succulent Terrarium">
+                <div class="image-caption">Beautiful succulent terrarium.</div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Lush+Corner" alt="Lush Green Corner">
+                <div class="image-caption">A truly lush green corner.</div>
+            </div>
+        </div>
+
+        <a href="index.html#community" class="back-link"><i class="fas fa-arrow-left"></i> Back to Community Hub</a>
+    </div>
+
+    </body>
+</html>

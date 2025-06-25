@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curry Leaf Plant Guide - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styles (copied for consistency) */
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background-color: #f7fdf7; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #283618; margin-bottom: 0.5em; }
+        h1 { font-size: 3em; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        ol { list-style: decimal; margin-left: 20px; margin-bottom: 1em; }
+        .plant-hero {
+            background: url('https://via.placeholder.com/1200x400/3a5a40/ffffff?text=Curry+Leaf+Plant') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .plant-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .plant-hero h1 {
+            color: #fff;
+            font-size: 3.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .guide-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .guide-section:last-of-type {
+            border-bottom: none;
+        }
+        .key-facts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #e0e9e4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .key-fact-item {
+            flex: 1 1 180px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .key-fact-item i {
+            font-size: 2em;
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+        .key-fact-item h4 {
+            color: #3a5a40;
+            margin-bottom: 5px;
+        }
+        .main-header { /* Copy header styles as needed */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        .main-footer {
+            background-color: #283618;
+            color: #e0e9e4;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            color: #a3b18a;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .plant-hero h1 { font-size: 2.5em; }
+            h1 { font-size: 2.5em; }
+            .key-facts { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#guides">Plant Guides</a></li>
+                    <li><a href="index.html#diy">DIY Projects</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="plant-hero" style="background-image: url('https://via.placeholder.com/1200x400/3a5a40/ffffff?text=Curry+Leaf+Plant');">
+            <h1>Curry Leaf Plant Guide</h1>
+        </section>
+
+        <div class="container section-padding">
+            <div class="key-facts">
+                <div class="key-fact-item">
+                    <i class="fas fa-sun"></i>
+                    <h4>Light Needs</h4>
+                    <p>Full Sun (6-8+ hours direct light)</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tint"></i>
+                    <h4>Watering</h4>
+                    <p>High (Keep soil consistently moist)</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Difficulty</h4>
+                    <p>Moderate</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tree"></i>
+                    <h4>Growth Habit</h4>
+                    <p>Small Tree/Shrub</p>
+                </div>
+            </div>
+
+            <section class="guide-section">
+                <h2>1. Introduction to Curry Leaf Plant</h2>
+                <p>The Curry Leaf plant (Murraya koenigii) is a tropical to sub-tropical tree, highly valued for its aromatic leaves which are a staple in Indian and Sri Lankan cuisine. The fresh leaves add a unique, distinctive flavor to curries, dals, and various other dishes. Growing your own curry leaf plant on a balcony or in a small garden can be incredibly rewarding, providing a continuous supply of fresh leaves.</p>
+                <p>While it prefers warm climates, with proper care and attention to its needs, it can thrive in containers in urban environments.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>2. Planting and Potting</h2>
+                <h3>Choosing the Right Pot:</h3>
+                <ul>
+                    <li>Start with a pot that is at least 12-15 inches in diameter for a young plant. Curry leaf plants can grow quite large over time, so be prepared to repot into a larger container (20-24 inches) as it matures.</li>
+                    <li>Ensure the pot has good drainage holes to prevent waterlogging, which is critical for this plant.</li>
+                </ul>
+                <h3>Soil Requirements:</h3>
+                <ul>
+                    <li>Curry leaf plants prefer well-draining, slightly acidic soil rich in organic matter.</li>
+                    <li>A good quality potting mix designed for tropical plants or a blend of garden soil, compost, and sand will work well. The soil should be fertile but drain freely.</li>
+                </ul>
+                <h3>Planting Process:</h3>
+                <ol>
+                    <li>Gently remove the plant from its nursery pot, taking care not to disturb the root ball excessively.</li>
+                    <li>Place a layer of your prepared potting mix at the bottom of the new pot, center the plant, and backfill with soil, ensuring the plant is at the same depth as it was previously.</li>
+                    <li>Water thoroughly after planting until water drains from the bottom.</li>
+                </ol>
+            </section>
+
+            <section class="guide-section">
+                <h2>3. Essential Care & Maintenance</h2>
+                <h3>Watering:</h3>
+                <p>Curry leaf plants need consistent moisture. Water regularly, especially during warm weather, ensuring the soil remains consistently moist but not soggy. Allow the top inch of soil to dry out slightly between waterings. Reduce watering during cooler months or if the plant goes dormant.</p>
+                <h3>Light:</h3>
+                <p>**Full sun is essential for vigorous growth and healthy foliage.** Provide at least 6-8 hours of direct sunlight daily. A south-facing balcony or a spot with ample direct light is ideal. In insufficient light, the plant will become leggy and produce fewer, less aromatic leaves.</p>
+                <h3>Temperature & Humidity:</h3>
+                <p>Being a tropical plant, it thrives in warm, humid conditions. It prefers temperatures between 20°C and 35°C (68°F and 95°F). Protect it from frost; if temperatures drop significantly, bring it indoors or provide adequate protection.</p>
+                <h3>Fertilizing:</h3>
+                <p>Feed your curry leaf plant regularly during the growing season (spring and summer) with a balanced liquid fertilizer or an organic fertilizer like compost tea. It benefits from nitrogen-rich fertilizers to promote leafy growth. Reduce feeding in fall and winter.</p>
+                <h3>Pruning:</h3>
+                <p>Regular pruning is important to encourage a bushier growth habit and prevent the plant from becoming leggy. Pinch off growing tips regularly. You can also prune off flowers if your primary goal is leaf production, as flowering can divert energy. Prune heavily in early spring before new growth begins.</p>
+                <h3>Pest and Disease Management:</h3>
+                <p>Common pests include scale insects, mealybugs, and spider mites. Inspect your plant regularly and treat infestations with neem oil spray or by wiping affected areas with rubbing alcohol. Yellowing leaves can indicate nutrient deficiency, overwatering, or pest issues.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>4. Harvesting & Uses</h2>
+                <h3>Harvesting:</h3>
+                <p>You can harvest curry leaves as needed once the plant is established. Snip off entire sprigs or individual leaves. Regular harvesting promotes new growth. Avoid stripping all leaves from a branch.</p>
+                <h3>Uses:</h3>
+                <ul>
+                    <li>**Culinary:** Essential ingredient in Indian, Sri Lankan, and Southeast Asian cuisines. Used fresh to temper oils, flavor curries, chutneys, and snacks.</li>
+                    <li>**Medicinal:** Traditionally used in Ayurvedic medicine for its various health benefits, including digestive aid and anti-inflammatory properties.</li>
+                    <li>**Aromatic:** The leaves release a strong, pleasant aroma when crushed or cooked.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

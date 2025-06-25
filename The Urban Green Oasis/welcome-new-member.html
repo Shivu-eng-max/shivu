@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to The Urban Green Oasis!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Re-use essential styles from your index.html's <style> block or a common CSS file */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7;
+            padding-top: 80px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Make sure it takes full height */
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            flex-grow: 1; /* Allow content to grow */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            text-align: center;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #283618;
+            margin-bottom: 0.5em;
+        }
+        h1 { font-size: 3.5em; color: #3a5a40; margin-bottom: 20px; }
+        h2 { font-size: 2.2em; color: #588157; margin-top: 30px; }
+        p { margin-bottom: 1em; font-size: 1.1em; }
+        .welcome-icon {
+            font-size: 5em;
+            color: #a3b18a;
+            margin-bottom: 30px;
+            animation: bounceIn 1s ease-out;
+        }
+        .welcome-buttons {
+            margin-top: 40px;
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .welcome-buttons .btn {
+            display: inline-block;
+            background-color: #3a5a40;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .welcome-buttons .btn:hover {
+            background-color: #588157;
+            transform: translateY(-3px);
+        }
+
+        /* Animation for icon */
+        @keyframes bounceIn {
+            0% { transform: scale(0.3); opacity: 0; }
+            50% { transform: scale(1.1); opacity: 1; }
+            70% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-hand-holding-heart welcome-icon"></i>
+        <h1>Welcome to The Urban Green Oasis!</h1>
+        <p>Congratulations! You've successfully taken the first step to becoming a cherished member of our growing community of urban gardeners.</p>
+
+        <h2>What's Next?</h2>
+        <p>We're thrilled to have you! Here's a quick guide to help you get started and make the most of your membership:</p>
+        
+        <div class="welcome-section">
+            <h3>1. Explore Our Plant Guides</h3>
+            <p>Dive into our extensive library of plant care guides. Whether you're a beginner or looking to master a specific plant, our guides have you covered.</p>
+            <p><a href="index.html#guides">Browse Plant Guides <i class="fas fa-arrow-right"></i></a></p>
+        </div>
+
+        <div class="welcome-section">
+            <h3>2. Join the Discussion Forums</h3>
+            <p>Connect with other members, ask questions, share your tips, and find inspiration in our active community forums.</p>
+            <p><a href="active-forums.html">Visit Active Forums <i class="fas fa-arrow-right"></i></a></p>
+        </div>
+
+        <div class="welcome-section">
+            <h3>3. Discover DIY Projects</h3>
+            <p>Get hands-on with our creative DIY projects tailored for urban spaces, from recycled planters to mini compost bins.</p>
+            <p><a href="index.html#diy">See DIY Projects <i class="fas fa-arrow-right"></i></a></p>
+        </div>
+
+        <div class="welcome-section">
+            <h3>4. Attend a Community Meetup</h3>
+            <p>We host 100 meetups per year! Check out our schedule for upcoming workshops, garden tours, and virtual sessions.</p>
+            <p><a href="meetups.html">View Meetup Schedule <i class="fas fa-arrow-right"></i></a></p>
+        </div>
+
+        <p style="margin-top: 30px;">We're excited to see your urban garden flourish with us!</p>
+
+        <div class="welcome-buttons">
+            <a href="index.html" class="btn"><i class="fas fa-home"></i> Go to Homepage</a>
+            <a href="active-forums.html" class="btn"><i class="fas fa-comments"></i> Go to Forums</a>
+        </div>
+    </div>
+</body>
+</html>

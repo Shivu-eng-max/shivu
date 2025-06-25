@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Urban Green Oasis - Your Guide to Balcony & Small Space Gardening</title>
+    <!-- Google Fonts for attractive typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- Embedded CSS for styling the website -->
+    <style>
+        /* Basic Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7; /* A very light green/off-white */
+        }
+
+        a {
+            text-decoration: none;
+            color: #3a5a40; /* Dark green link */
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #588157; /* Lighter green on hover */
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: #283618; /* Very dark green */
+            margin-bottom: 0.5em;
+        }
+
+        h1 { font-size: 3.5em; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 1.8em; }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background-color: #e0e9e4; /* A soft, calming light green */
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .section-description {
+            font-size: 1.1em;
+            color: #606c38; /* Muted green for descriptions */
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: #3a5a40; /* Primary green */
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: #588157; /* Lighter green */
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-secondary {
+            background-color: #a3b18a; /* Accent green */
+            color: #283618;
+            padding: 10px 20px;
+            font-size: 0.9em;
+        }
+
+        .btn-secondary:hover {
+            background-color: #bac4b3;
+            transform: translateY(-2px);
+        }
+
+        .btn-primary-outline {
+            background: none;
+            color: #3a5a40;
+            border: 2px solid #3a5a40;
+        }
+
+        .btn-primary-outline:hover {
+            background-color: #3a5a40;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Header */
+        .main-header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .main-nav li {
+            margin-left: 30px;
+        }
+
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .nav-toggle {
+            display: none; /* Hidden by default for desktop */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .nav-toggle .bar {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px auto;
+            background-color: #3a5a40;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            /* Replace this URL with your actual high-res hero image */
+            background: url('https://via.placeholder.com/1600x800/588157/ffffff?text=LUSH+BALCONY+GARDEN') no-repeat center center/cover;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4); /* Dark overlay for text readability */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5em;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: #fff;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        /* Featured Content */
+        .featured-content h2 {
+            text-align: center;
+            margin-bottom: 60px;
+            color: #283618;
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .featured-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .featured-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .featured-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .featured-item h3 {
+            padding: 20px 20px 10px;
+            color: #3a5a40;
+        }
+
+        .featured-item p {
+            padding: 0 20px 15px;
+            font-size: 0.95em;
+            color: #606c38;
+        }
+
+        .featured-item .read-more {
+            display: block;
+            padding: 15px 20px;
+            background-color: #e0e9e4;
+            color: #3a5a40;
+            font-weight: 600;
+            text-align: center;
+            border-top: 1px solid #d2dcd7;
+            transition: background-color 0.3s ease;
+        }
+
+        .featured-item .read-more:hover {
+            background-color: #d2dcd7;
+        }
+
+        /* Plant Guides */
+        .plant-guides h2, .plant-guides .section-description {
+            text-align: center;
+        }
+
+        .plant-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .plant-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            padding-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .plant-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .plant-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+
+        .plant-card h3 {
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+
+        .plant-card p {
+            font-size: 0.9em;
+            color: #606c38;
+            padding: 0 20px;
+            margin-bottom: 15px;
+        }
+
+        .plant-meta {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 0.85em;
+            color: #588157;
+            margin-bottom: 20px;
+        }
+
+        .plant-meta i {
+            margin-right: 5px;
+            color: #3a5a40;
+        }
+
+        /* DIY Projects */
+        .diy-projects h2, .diy-projects .section-description {
+            text-align: center;
+        }
+
+        .diy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .diy-item {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .diy-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .diy-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .diy-item h3 {
+            padding: 25px 25px 10px;
+            color: #3a5a40;
+        }
+
+        .diy-item p {
+            padding: 0 25px 20px;
+            font-size: 1em;
+            color: #606c38;
+        }
+
+        .diy-item .read-more {
+            display: block;
+            padding: 18px 25px;
+            background-color: #e0e9e4;
+            color: #3a5a40;
+            font-weight: 600;
+            text-align: center;
+            border-top: 1px solid #d2dcd7;
+            transition: background-color 0.3s ease;
+        }
+
+        .diy-item .read-more:hover {
+            background-color: #d2dcd7;
+        }
+
+        /* Community Section */
+        .community-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .community-feature-item {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 40px 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .community-feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .community-feature-item i {
+            color: #3a5a40;
+            margin-bottom: 20px;
+        }
+
+        .community-feature-item h3 {
+            color: #283618;
+            margin-bottom: 10px;
+        }
+
+        .community-feature-item p {
+            color: #606c38;
+            margin-bottom: 20px;
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background-color: #606c38; /* A darker, rich green */
+            color: #fff;
+            padding: 60px 0;
+        }
+
+        .newsletter-section h2 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-section .section-description {
+            color: #e0e9e4;
+            margin-bottom: 40px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            max-width: 600px;
+            margin: 0 auto;
+            border-radius: 50px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .newsletter-form input[type="email"] {
+            flex-grow: 1;
+            padding: 15px 25px;
+            border: none;
+            font-size: 1.1em;
+            outline: none;
+            border-radius: 50px 0 0 50px; /* Rounded left */
+        }
+
+        .newsletter-form button {
+            background-color: #283618; /* Even darker green */
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            border-radius: 0 50px 50px 0; /* Rounded right */
+            transition: background-color 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            background-color: #3a5a40;
+        }
+
+        /* Footer */
+        .main-footer {
+            background-color: #283618; /* Darkest green */
+            color: #e0e9e4;
+            padding: 60px 0 30px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #a3b18a; /* Accent green for headings */
+            margin-bottom: 20px;
+            font-size: 1.4em;
+        }
+
+        .footer-col p, .footer-col ul {
+            font-size: 0.95em;
+            line-height: 1.8;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li a {
+            color: #e0e9e4;
+            padding: 5px 0;
+            display: inline-block;
+        }
+
+        .footer-col ul li a:hover {
+            color: #588157;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            color: #e0e9e4;
+            font-size: 1.5em;
+            margin-right: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #588157;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            color: #a3b18a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content h1 {
+                font-size: 3.5em;
+            }
+            .hero-content p {
+                font-size: 1.3em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav ul {
+                display: none; /* Hide by default on small screens */
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(255, 255, 255, 0.98);
+                position: absolute;
+                top: 80px; /* Adjust based on header height */
+                left: 0;
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                padding: 20px 0;
+            }
+
+            .main-nav ul.active {
+                display: flex; /* Show when 'active' class is added by JS */
+            }
+
+            .main-nav li {
+                margin: 10px 0;
+                text-align: center;
+            }
+
+            .main-nav a {
+                padding: 10px 0;
+                display: block;
+                font-size: 1.1em;
+            }
+
+            .nav-toggle {
+                display: block; /* Show hamburger icon */
+            }
+
+            .hero-content h1 {
+                font-size: 2.8em;
+            }
+            .hero-content p {
+                font-size: 1.1em;
+            }
+
+            .featured-grid, .plant-grid, .diy-grid, .community-features {
+                grid-template-columns: 1fr; /* Stack columns on small screens */
+            }
+
+            .section-padding {
+                padding: 60px 0;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+                border-radius: 0; /* Remove rounding for stack */
+            }
+
+            .newsletter-form input[type="email"],
+            .newsletter-form button {
+                border-radius: 0; /* Remove rounding for stack */
+                width: 100%;
+                text-align: center;
+                padding: 15px;
+            }
+            .newsletter-form input[type="email"] {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2em;
+            }
+            .hero-content p {
+                font-size: 0.9em;
+            }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.5em; }
+            .featured-item img, .plant-card img, .diy-item img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="#">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="nav-links">
+                    <!-- About link updated to open in a new tab -->
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#guides">Plant Guides</a></li>
+                    <li><a href="#diy">DIY Projects</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="shop.html">Shop</a></li> </ul>
+                    <li><a href="contact.html">Contact</a></li> </ul>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Cultivate Your City Sanctuary</h1>
+                <p>Transform your balcony, patio, or windowsill into a thriving green oasis. Discover tips, guides, and inspiration for urban gardening.</p>
+                <a href="#guides" class="btn btn-primary">Start Your Garden Journey <i class="fas fa-leaf"></i></a>
+            </div>
+        </section>
+
+        <section id="featured-content" class="featured-content section-padding">
+            <div class="container">
+                <h2>Featured for You</h2>
+                <div class="featured-grid">
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/300x200/a3b18a/ffffff?text=Herbs+for+Beginners" alt="Herbs for Beginners">
+                        <h3>Easy Herbs for Beginners</h3>
+                        <p>Start your edible garden with these foolproof herbs that thrive in pots.</p>
+                        <a href="easy-herbs-guide.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/300x200/588157/ffffff?text=DIY+Vertical+Garden" alt="DIY Vertical Garden">
+                        <h3>DIY Vertical Garden Ideas</h3>
+                        <p>Maximize your small space with creative and affordable vertical garden solutions.</p>
+                       <a href="diy-vertical-garden-guide.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                    <div class="featured-item">
+                        <img src="https://via.placeholder.com/300x200/3a5a40/ffffff?text=Monsoon+Plants" alt="Monsoon Plants">
+                        <h3>Best Plants for Indian Monsoon</h3>
+                        <p>Discover resilient plants that flourish during the rainy season in India.</p>
+                        <a href="monsoon-plants-guide.html" class="btn btn-secondary">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="guides" class="plant-guides section-padding bg-light">
+            <div class="container">
+                <h2>Our Comprehensive Plant Guides</h2>
+                <p class="section-description">Find the perfect plant for your urban space. Filter by light, water, and care level.</p>
+                <div class="plant-grid">
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/588157/ffffff?text=Tulasi" alt="Tulasi Plant">
+                        <h3>Tulasi (Holy Basil)</h3>
+                        <p>A sacred and easy-to-grow herb, perfect for sunny spots.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-sun"></i> Full Sun</span>
+                            <span><i class="fas fa-tint"></i> Moderate Water</span>
+                        </div>
+                        <a href="tulasi-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/a3b18a/ffffff?text=Money+Plant" alt="Money Plant">
+                        <h3>Money Plant (Pothos)</h3>
+                        <p>Popular for beginners, thrives indoors with minimal care.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-cloud-sun"></i> Low Light</span>
+                            <span><i class="fas fa-tint"></i> Low Water</span>
+                        </div>
+                        <a href="money-plant-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                     <div class="plant-card">
+                        <img src="https://via.placeholder.com/250x200/3a5a40/ffffff?text=Hibiscus" alt="Hibiscus">
+                        <h3>Hibiscus</h3>
+                        <p>Add vibrant color to your balcony with this beautiful flowering plant.</p>
+                        <div class="plant-meta">
+                            <span><i class="fas fa-sun"></i> Full Sun</span>
+                            <span><i class="fas fa-tint"></i> High Water</span>
+                        </div>
+                        <a href="hibiscus-guide.html" class="btn btn-secondary">View Guide</a>
+                    </div>
+                    <!-- More plant cards would go here -->
+                </div>
+                <div class="text-center mt-4">
+                     <a href="all-plants.html" class="btn btn-primary-outline">Explore All Plants <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="diy" class="diy-projects section-padding">
+            <div class="container">
+                <h2>Creative DIY Gardening Projects</h2>
+                <p class="section-description">Transform everyday items into charming planters and functional garden tools.</p>
+                <div class="diy-grid">
+                    <div class="diy-item">
+                        <img src="https://via.placeholder.com/400x250/606c38/ffffff?text=Bottle+Planters" alt="Recycled Bottle Planters">
+                        <h3>Recycled Bottle Planters</h3>
+                        <p>Turn plastic bottles into stylish hanging planters for herbs and small flowers.</p>
+                        <a href="recycled-bottle-planters.html" class="read-more">Learn How</a>
+                    </div>
+                    <div class="diy-item">
+                        <img src="https://via.placeholder.com/400x250/283618/ffffff?text=Compost+Bin" alt="DIY Compost Bin">
+                        <h3>Build Your Own Mini Compost Bin</h3>
+                        <p>Create nutrient-rich soil from kitchen scraps right on your balcony.</p>
+                        <a href="mini-compost-bin-guide.html" class="read-more">Get Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="community" class="community-section section-padding bg-light">
+            <div class="container text-center">
+                <h2>Join Our Growing Green Community</h2>
+                <p class="section-description">Share your garden successes, ask questions, and connect with fellow urban gardeners.</p>
+                <div class="community-features">
+                    <div class="community-feature-item">
+                        <i class="fas fa-comments fa-3x icon-green"></i>
+                        <h3>Active Forums</h3>
+                        <p>Discuss planting tips, troubleshoot issues, and find inspiration.</p>
+                       <a href="active-forums.html" class="read-more">Visit Forums</a>
+                    </div>
+                    <div class="community-feature-item">
+                        <i class="fas fa-camera fa-3x icon-green"></i>
+                        <h3>Garden Gallery</h3>
+                        <p>Showcase your beautiful urban oasis and get ideas from others.</p>
+                        <a href="garden-gallery.html" class="read-more">Explore Gallery</a>
+                    </div>
+                     <div class="community-feature-item">
+                        <i class="fas fa-handshake fa-3x icon-green"></i>
+                        <h3>Local Meetups</h3>
+                        <p>Connect with gardeners in your city for plant swaps and shared learning.</p>
+                        <a href="meetups.html" class="read-more">Learn More</a>
+                    </div>
+                </div>
+               <a href="membership.html" class="btn">Become a Member</a><i class="fas fa-user-plus"></i></a>
+            </div>
+        </section>
+
+        <section class="newsletter-section section-padding">
+            <div class="container text-center">
+                <h2>Never Miss a Green Tip!</h2>
+                <p class="section-description">Subscribe to our newsletter for seasonal advice, new plant guides, and exclusive DIY projects.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit" class="btn btn-primary">Subscribe <i class="fas fa-envelope"></i></button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>The Urban Green Oasis</h4>
+                    <p>Cultivating joy, one plant at a time, in the heart of the city.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#guides">Plant Guides</a></li>
+                       <li><a href="#diy">DIY Projects</a></li>
+                        <li><a href="#community">Community</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Embedded JavaScript for basic interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            // Check if elements exist before adding event listeners
+            if (navToggle && navLinks) {
+                navToggle.addEventListener('click', () => {
+                    navLinks.classList.toggle('active'); // Toggles a class that shows/hides the nav links
+                    navToggle.classList.toggle('open'); // Optional: for animating the hamburger icon
+                });
+
+                // Close mobile nav when a link is clicked (for single-page navigation)
+                navLinks.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        if (navLinks.classList.contains('active')) {
+                            navLinks.classList.remove('active');
+                            navToggle.classList.remove('open');
+                        }
+                    });
+                });
+            }
+
+            // Optional: Smooth scrolling for anchor links (e.g., clicking 'Plant Guides' scrolls smoothly)
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault(); // Prevent default jump behavior
+
+                    // Scroll to the target element
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth' // Smooth scroll effect
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>

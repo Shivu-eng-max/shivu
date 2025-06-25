@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Shop - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Re-use essential styles from your index.html's <style> block or a common CSS file */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7;
+            padding-top: 80px; /* To account for sticky header if you include one */
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #283618;
+            margin-bottom: 0.5em;
+        }
+        h1 { font-size: 3em; color: #3a5a40; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 1.5em; border-bottom: 2px solid #e0e9e4; padding-bottom: 10px; }
+        h3 { font-size: 1.5em; color: #588157; margin-top: 1em;}
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-weight: 600;
+            color: #3a5a40;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #588157;
+        }
+        .shop-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .product-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .category-card {
+            background-color: #e0e9e4;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .category-card i {
+            font-size: 3em;
+            color: #588157;
+            margin-bottom: 15px;
+        }
+        .category-card h4 {
+            font-family: 'Playfair Display', serif;
+            color: #283618;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+        }
+        .usp-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+        .usp-list li {
+            background-color: #f0f8f0;
+            padding: 10px 15px;
+            margin-bottom: 10px;
+            border-left: 4px solid #3a5a40;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .call-to-action {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #e0e9e4;
+            border-radius: 10px;
+        }
+        .call-to-action .btn {
+            display: inline-block;
+            background-color: #3a5a40;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .call-to-action .btn:hover {
+            background-color: #588157;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-store"></i> The Urban Green Oasis Shop</h1>
+        <p class="text-center">Discover carefully curated products to help your urban garden thrive. From essential tools to unique plants, we've got everything you need for your green space.</p>
+
+        <div class="shop-section">
+            <h2>What We Offer</h2>
+            <p>Our shop is designed to bring you high-quality, sustainable, and urban-gardener-friendly products. Here are some of our main categories:</p>
+
+            <div class="product-categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Seeds & Saplings</h4>
+                    <p>High-germination seeds, organic saplings for herbs, veggies, and flowers.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-chair"></i>
+                    <h4>Pots & Planters</h4>
+                    <p>Space-saving, lightweight, and stylish pots for balconies and indoor use.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-shovel"></i>
+                    <h4>Gardening Tools</h4>
+                    <p>Ergonomic hand tools, mini shovels, pruners, and watering cans.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Soil & Fertilizers</h4>
+                    <p>Organic potting mixes, compost, and natural fertilizers for healthy growth.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-spray-can"></i>
+                    <h4>Pest Control</h4>
+                    <p>Organic pest control solutions, neem oil, and natural deterrents.</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-book"></i>
+                    <h4>Gardening Books & Guides</h4>
+                    <p>Books on urban gardening, hydroponics, and plant care.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="shop-section">
+            <h2>Why Shop With Us?</h2>
+            <ul class="usp-list">
+                <li><i class="fas fa-check-circle"></i> **Curated Selection:** Every product is hand-picked for urban gardeners.</li>
+                <li><i class="fas fa-check-circle"></i> **Sustainable Choices:** We prioritize eco-friendly and organic options.</li>
+                <li><i class="fas fa-check-circle"></i> **Expert Advice:** Access to guides and community support for product usage.</li>
+                <li><i class="fas fa-check-circle"></i> **Community Support:** Your purchases help support our community initiatives.</li>
+                <li><i class="fas fa-check-circle"></i> **Convenient Delivery:** Get your gardening essentials delivered to your doorstep.</li>
+            </ul>
+        </div>
+
+        <div class="call-to-action">
+            <h2>Ready to Grow Your Oasis?</h2>
+            <p>While our shop is currently informational, we're building something great for you! Stay tuned for our full e-commerce launch.</p>
+            <a href="membership.html" class="btn"><i class="fas fa-users-crown"></i> Become a Member for Updates</a>
+        </div>
+
+        <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+    </div>
+
+    </body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Meetups - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Re-use essential styles from your index.html's <style> block or a common CSS file */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f7fdf7;
+            padding-top: 80px; /* To account for sticky header if you include one */
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: #283618;
+            margin-bottom: 0.5em;
+        }
+        h1 { font-size: 3em; color: #3a5a40; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 1.5em; border-bottom: 2px solid #e0e9e4; padding-bottom: 10px; }
+        h3 { font-size: 1.5em; color: #588157; margin-top: 1em;}
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        .back-link {
+            display: inline-block;
+            margin-top: 40px;
+            font-weight: 600;
+            color: #3a5a40;
+            transition: color 0.3s ease;
+        }
+        .back-link:hover {
+            color: #588157;
+        }
+        .meetup-section {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+        .meetup-section:last-child {
+            margin-bottom: 0;
+        }
+        .meetup-card {
+            background-color: #f0f8f0;
+            border-left: 5px solid #588157;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        .meetup-card i {
+            font-size: 2em;
+            color: #3a5a40;
+            flex-shrink: 0;
+            margin-top: 5px;
+        }
+        .meetup-card-content h4 {
+            margin-top: 0;
+            margin-bottom: 5px;
+            color: #283618;
+        }
+        .meetup-card-content p {
+            font-size: 0.95em;
+            margin-bottom: 0.5em;
+        }
+        .meetup-card-content .date-location {
+            font-size: 0.85em;
+            color: #606c38;
+            font-style: italic;
+        }
+        .call-to-action {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #e0e9e4;
+            border-radius: 10px;
+        }
+        .call-to-action .btn {
+            display: inline-block;
+            background-color: #3a5a40;
+            color: #fff;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .call-to-action .btn:hover {
+            background-color: #588157;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-handshake"></i> Community Meetups: 100 Events Annually!</h1>
+        <p class="text-center">Join The Urban Green Oasis community for exciting, educational, and inspiring meetups throughout the year. We aim to host **100 meetups annually** to connect urban gardeners, share knowledge, and foster a thriving green community!</p>
+
+        <div class="meetup-section">
+            <h2>Our Meetup Philosophy</h2>
+            <p>We believe in the power of shared experiences and collective learning. Our meetups are designed to be:</p>
+            <ul>
+                <li><strong>Diverse:</strong> Covering a wide range of topics from beginner basics to advanced techniques.</li>
+                <li><strong>Accessible:</strong> Held in various formats (online webinars, in-person workshops, garden tours) and locations.</li>
+                <li><strong>Engaging:</strong> Interactive sessions, Q&As, and hands-on activities.</li>
+                <li><strong>Community-Driven:</strong> Many ideas and even hosting duties come from our active members!</li>
+            </ul>
+        </div>
+
+        <div class="meetup-section">
+            <h2>Upcoming Meetups (A Glimpse)</h2>
+            <p>Here are just a few examples of the types of meetups you can expect:</p>
+
+            <div class="meetup-card">
+                <i class="fas fa-seedling"></i>
+                <div class="meetup-card-content">
+                    <h4>Beginner's Guide to Seed Starting</h4>
+                    <p>Learn the essentials of starting seeds indoors for a successful gardening season. Topics include seed selection, potting mixes, light requirements, and watering techniques.</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> June 15, 2025 | <i class="fas fa-video"></i> Online Webinar</p>
+                </div>
+            </div>
+
+            <div class="meetup-card">
+                <i class="fas fa-tint"></i>
+                <div class="meetup-card-content">
+                    <h4>Advanced Hydroponics for Urban Spaces</h4>
+                    <p>Deep dive into setting up and maintaining a small-scale hydroponic system on your balcony or patio. Ideal for those looking to grow more with less space.</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> June 28, 2025 | <i class="fas fa-map-marker-alt"></i> Community Garden Lab (Mumbai)</p>
+                </div>
+            </div>
+
+            <div class="meetup-card">
+                <i class="fas fa-bug"></i>
+                <div class="meetup-card-content">
+                    <h4>Natural Pest Control Solutions Workshop</h4>
+                    <p>Discover organic and eco-friendly ways to keep common garden pests at bay. Learn to make your own neem oil spray and identify beneficial insects.</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> July 7, 2025 | <i class="fas fa-building"></i> Local Community Center (Delhi)</p>
+                </div>
+            </div>
+
+            <div class="meetup-card">
+                <i class="fas fa-tree"></i>
+                <div class="meetup-card-content">
+                    <h4>Composting Basics for Apartment Dwellers</h4>
+                    <p>Master the art of mini composting. Turn your kitchen scraps into rich soil amendment with simple techniques suitable for small homes.</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> July 20, 2025 | <i class="fas fa-video"></i> Online Webinar</p>
+                </div>
+            </div>
+
+            <div class="meetup-card">
+                <i class="fas fa-leaf"></i>
+                <div class="meetup-card-content">
+                    <h4>Rare & Exotic Plant Swap</h4>
+                    <p>Bring your cuttings or small plants to exchange with fellow enthusiasts. A great opportunity to diversify your collection and meet new plant friends!</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> August 3, 2025 | <i class="fas fa-map-marker-alt"></i> Botanical Garden (Bangalore)</p>
+                </div>
+            </div>
+
+            <div class="meetup-card">
+                <i class="fas fa-mountain"></i>
+                <div class="meetup-card-content">
+                    <h4>Terrace Gardening Design Principles</h4>
+                    <p>Learn how to design an efficient and beautiful terrace garden, focusing on space utilization, plant selection, and aesthetic appeal.</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> August 18, 2025 | <i class="fas fa-video"></i> Online Workshop</p>
+                </div>
+            </div>
+
+            <div class="meetup-card">
+                <i class="fas fa-hotpepper"></i>
+                <div class="meetup-card-content">
+                    <h4>Growing Chilies in Containers</h4>
+                    <p>Expert tips on cultivating various chili varieties in pots, from seed to harvest. Learn about different heat levels and care requirements.</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> September 5, 2025 | <i class="fas fa-map-marker-alt"></i> Urban Farm (Chennai)</p>
+                </div>
+            </div>
+
+            <div class="meetup-card">
+                <i class="fas fa-sun"></i>
+                <div class="meetup-card-content">
+                    <h4>Winter Gardening in India</h4>
+                    <p>Prepare your urban garden for the cooler months. Discover what to plant, how to protect delicate plants, and extend your harvest.</p>
+                    <p class="date-location"><i class="far fa-calendar-alt"></i> October 10, 2025 | <i class="fas fa-video"></i> Online Webinar</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="call-to-action">
+            <h2>Want to Host a Meetup or Suggest a Topic?</h2>
+            <p>Our community thrives on your participation! If you have expertise to share, a great idea for a meetup, or a space to host, we'd love to hear from you.</p>
+            <a href="active-forums.html#feedback" class="btn"><i class="fas fa-lightbulb"></i> Suggest a Meetup</a>
+        </div>
+
+        <a href="index.html#community" class="back-link"><i class="fas fa-arrow-left"></i> Back to Community Hub</a>
+    </div>
+</body>
+</html>

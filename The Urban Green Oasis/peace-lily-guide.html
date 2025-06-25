@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peace Lily Guide - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styles (copied for consistency) */
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background-color: #f7fdf7; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #283618; margin-bottom: 0.5em; }
+        h1 { font-size: 3em; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        ol { list-style: decimal; margin-left: 20px; margin-bottom: 1em; }
+        .plant-hero {
+            background: url('https://via.placeholder.com/1200x400/a3b18a/ffffff?text=Peace+Lily+Plant') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .plant-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .plant-hero h1 {
+            color: #fff;
+            font-size: 3.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .guide-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .guide-section:last-of-type {
+            border-bottom: none;
+        }
+        .key-facts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #e0e9e4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .key-fact-item {
+            flex: 1 1 180px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .key-fact-item i {
+            font-size: 2em;
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+        .key-fact-item h4 {
+            color: #3a5a40;
+            margin-bottom: 5px;
+        }
+        .main-header { /* Copy header styles as needed */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        .main-footer {
+            background-color: #283618;
+            color: #e0e9e4;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            color: #a3b18a;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .plant-hero h1 { font-size: 2.5em; }
+            h1 { font-size: 2.5em; }
+            .key-facts { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#guides">Plant Guides</a></li>
+                    <li><a href="index.html#diy">DIY Projects</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="plant-hero" style="background-image: url('https://via.placeholder.com/1200x400/a3b18a/ffffff?text=Peace+Lily+Plant');">
+            <h1>Peace Lily Guide</h1>
+        </section>
+
+        <div class="container section-padding">
+            <div class="key-facts">
+                <div class="key-fact-item">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h4>Light Needs</h4>
+                    <p>Low to Medium Indirect Light</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tint"></i>
+                    <h4>Watering</h4>
+                    <p>Moderate (Keep soil consistently moist)</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Difficulty</h4>
+                    <p>Easy to Moderate</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tree"></i>
+                    <h4>Growth Habit</h4>
+                    <p>Bushy with Spathe Flowers</p>
+                </div>
+            </div>
+
+            <section class="guide-section">
+                <h2>1. Introduction to Peace Lily</h2>
+                <p>The Peace Lily (Spathiphyllum) is a popular indoor plant known for its elegant white "flowers" (which are actually modified leaves called spathes) and glossy green foliage. It's not only beautiful but also highly effective at purifying indoor air, making it a favorite for homes and offices. Peace Lilies are relatively easy to care for and can signal their needs by wilting, making them great communicators for new plant parents.</p>
+                <p>They are native to tropical rainforests, so replicating a humid, warm, and indirect light environment is key to their success.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>2. Planting and Potting</h2>
+                <h3>Choosing the Right Pot:</h3>
+                <ul>
+                    <li>Select a pot that is about 6-8 inches in diameter for a medium-sized plant, increasing size as the plant grows. They like to be slightly root-bound.</li>
+                    <li>Ensure the pot has adequate drainage holes to prevent waterlogging, which is detrimental to Peace Lilies.</li>
+                </ul>
+                <h3>Soil Requirements:</h3>
+                <ul>
+                    <li>Peace Lilies thrive in rich, well-draining potting mix that retains some moisture.</li>
+                    <li>A good quality all-purpose potting mix, possibly with some added perlite or orchid bark for aeration, works well.</li>
+                </ul>
+                <h3>Planting Process:</h3>
+                <ol>
+                    <li>Gently remove the Peace Lily from its nursery container. If the roots are very dense, you can gently tease them apart.</li>
+                    <li>Place a layer of potting mix at the bottom of the new pot, center the plant, and backfill with soil, ensuring the plant is at the same depth as before.</li>
+                    <li>Water thoroughly after potting until water drains from the bottom.</li>
+                </ol>
+            </section>
+
+            <section class="guide-section">
+                <h2>3. Essential Care & Maintenance</h2>
+                <h3>Watering:</h3>
+                <p>Peace Lilies prefer consistently moist soil, but they do not like to sit in standing water. Water when the top inch of soil feels dry. They are very dramatic when thirsty and will wilt significantly, but they usually bounce back quickly after watering. Reduce watering slightly in winter.</p>
+                <h3>Light:</h3>
+                <p>These plants prefer low to medium indirect light. Direct sunlight can scorch their leaves, causing them to turn yellow or brown. An east-facing window or a spot several feet away from a south or west-facing window is ideal. They can tolerate very low light, but may not flower as much.</p>
+                <h3>Humidity & Temperature:</h3>
+                <p>As tropical plants, Peace Lilies appreciate high humidity. You can increase humidity by misting the leaves regularly, placing the pot on a pebble tray with water, or using a humidifier. They prefer temperatures between 18°C and 29°C (65°F and 85°F). Avoid cold drafts.</p>
+                <h3>Fertilizing:</h3>
+                <p>Feed your Peace Lily every 6-8 weeks during the spring and summer growing season with a balanced liquid houseplant fertilizer diluted to half strength. Too much fertilizer can burn the leaves and hinder blooming.</p>
+                <h3>Pruning & Cleaning:</h3>
+                <p>Remove any yellowing or browning leaves by cutting them at the base of the plant. Snip off spent flower stalks (spathes) once they fade. Wipe leaves with a damp cloth periodically to remove dust and help the plant photosynthesize effectively.</p>
+                <h3>Pest and Disease Management:</h3>
+                <p>Peace Lilies are generally robust. Watch out for common houseplant pests like spider mites, mealybugs, or aphids. Treat with neem oil or insecticidal soap if necessary. The most common issue is root rot due to overwatering.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>4. Common Issues & Solutions</h2>
+                <h3>Yellow Leaves:</h3>
+                <p>Often caused by overwatering (root rot), underwatering, or too much direct sunlight. Check soil moisture and light exposure.</p>
+                <h3>Brown Tips:</h3>
+                <p>Usually indicates low humidity, excess fertilizer, or tap water with high chlorine/fluoride. Use filtered water and increase humidity if possible.</p>
+                <h3>No Flowers:</h3>
+                <p>Typically due to insufficient light, lack of fertilization, or the plant being too young. Ensure adequate indirect light and regular feeding during the growing season.</p>
+                <h3>Wilting:</h3>
+                <p>A clear sign of thirst! Water thoroughly, and the plant should perk up within a few hours. If wilting persists after watering, it might be due to root rot (check roots for mushiness).</p>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

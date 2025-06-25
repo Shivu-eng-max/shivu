@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider Plant Guide - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styles (copied for consistency) */
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background-color: #f7fdf7; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #283618; margin-bottom: 0.5em; }
+        h1 { font-size: 3em; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        ol { list-style: decimal; margin-left: 20px; margin-bottom: 1em; }
+        .plant-hero {
+            background: url('https://via.placeholder.com/1200x400/606c38/ffffff?text=Spider+Plant') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .plant-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .plant-hero h1 {
+            color: #fff;
+            font-size: 3.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .guide-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .guide-section:last-of-type {
+            border-bottom: none;
+        }
+        .key-facts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #e0e9e4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .key-fact-item {
+            flex: 1 1 180px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .key-fact-item i {
+            font-size: 2em;
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+        .key-fact-item h4 {
+            color: #3a5a40;
+            margin-bottom: 5px;
+        }
+        .main-header { /* Copy header styles as needed */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        .main-footer {
+            background-color: #283618;
+            color: #e0e9e4;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            color: #a3b18a;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .plant-hero h1 { font-size: 2.5em; }
+            h1 { font-size: 2.5em; }
+            .key-facts { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#guides">Plant Guides</a></li>
+                    <li><a href="index.html#diy">DIY Projects</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="plant-hero" style="background-image: url('https://via.placeholder.com/1200x400/606c38/ffffff?text=Spider+Plant');">
+            <h1>Spider Plant Guide</h1>
+        </section>
+
+        <div class="container section-padding">
+            <div class="key-facts">
+                <div class="key-fact-item">
+                    <i class="fas fa-cloud-sun"></i>
+                    <h4>Light Needs</h4>
+                    <p>Bright Indirect Light</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tint"></i>
+                    <h4>Watering</h4>
+                    <p>Moderate (Keep soil slightly moist)</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Difficulty</h4>
+                    <p>Easy</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tree"></i>
+                    <h4>Growth Habit</h4>
+                    <p>Clumping/Arching with Plantlets</p>
+                </div>
+            </div>
+
+            <section class="guide-section">
+                <h2>1. Introduction to Spider Plant</h2>
+                <p>The Spider Plant (Chlorophytum comosum) is one of the most common and easiest houseplants to grow, making it perfect for beginners. It's recognizable by its arching, strap-like leaves, often variegated with white or cream stripes, and its charming "spiderettes" or plantlets that dangle from the mother plant, resembling spiders on a web. Beyond its attractive appearance, the Spider Plant is also highly effective at purifying indoor air.</p>
+                <p>Its resilience and ease of propagation make it a fantastic addition to any indoor space, including urban balconies or windowsills.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>2. Planting and Potting</h2>
+                <h3>Choosing the Right Pot:</h3>
+                <ul>
+                    <li>Spider Plants do well in various pot types. A hanging basket is particularly effective for showcasing its cascading plantlets.</li>
+                    <li>Choose a pot that allows for drainage; about 6-8 inches for a mature plant. They prefer to be slightly root-bound.</li>
+                    <li>**Ensure excellent drainage holes.**</li>
+                </ul>
+                <h3>Soil Requirements:</h3>
+                <ul>
+                    <li>Spider Plants prefer a well-draining, loose potting mix.</li>
+                    <li>A standard all-purpose potting mix works well, possibly amended with perlite to enhance drainage and aeration.</li>
+                </ul>
+                <h3>Planting Process:</h3>
+                <ol>
+                    <li>If potting a "spiderette" (baby plant), either root it in water first or plant it directly into moist potting mix.</li>
+                    <li>For a mature plant, gently remove it from its current pot, place it in the new pot, and backfill with soil, ensuring the crown (where leaves meet the roots) is at the soil surface.</li>
+                    <li>Water thoroughly after potting.</li>
+                </ol>
+            </section>
+
+            <section class="guide-section">
+                <h2>3. Essential Care & Maintenance</h2>
+                <h3>Watering:</h3>
+                <p>Spider Plants like their soil to be consistently moist but never soggy. Water when the top inch of soil feels dry to the touch. Reduce watering slightly in winter. Overwatering can lead to root rot, while too little water can cause brown leaf tips.</p>
+                <h3>Light:</h3>
+                <p>Bright, indirect light is ideal for Spider Plants. They can tolerate some lower light conditions, but their variegation might become less pronounced. Avoid direct, intense sunlight, which can scorch their leaves.</p>
+                <h3>Humidity & Temperature:</h3>
+                <p>They appreciate moderate to high humidity but are quite forgiving in average household humidity. Misting occasionally can be beneficial, especially in dry environments. They prefer temperatures between 18°C and 27°C (65°F and 80°F). Protect from cold drafts.</p>
+                <h3>Fertilizing:</h3>
+                <p>Feed your Spider Plant every 2-4 weeks during the active growing season (spring and summer) with a balanced liquid houseplant fertilizer diluted to half strength. Reduce or stop fertilizing in fall and winter.</p>
+                <h3>Pruning & Cleaning:</h3>
+                <p>Trim off any yellow or brown leaves at the base. You can also trim off excess spiderettes if the plant becomes too crowded or if you don't want to propagate them. Wipe leaves with a damp cloth to remove dust and improve light absorption.</p>
+                <h3>Pest and Disease Management:</h3>
+                <p>Spider Plants are generally resistant to pests. Occasionally, you might encounter spider mites, mealybugs, or aphids. Treat with insecticidal soap or neem oil if necessary. Brown tips are a common issue, often due to fluoride in tap water, low humidity, or inconsistent watering. Using distilled or rainwater can help prevent this.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>4. Propagation & Benefits</h2>
+                <h3>Propagation:</h3>
+                <p>Propagating Spider Plants is incredibly easy using their "spiderettes." Simply snip off a plantlet, and either place it in a glass of water until roots form, or plant it directly into moist potting mix. They root very quickly.</p>
+                <h3>Benefits:</h3>
+                <ul>
+                    <li>**Air Purification:** Highly effective at removing common indoor air pollutants like formaldehyde and xylene, as identified by NASA's Clean Air Study.</li>
+                    <li>**Easy to Grow:** Very forgiving and adaptable, perfect for beginners.</li>
+                    <li>**Prolific & Shareable:** Produces numerous plantlets, making it easy to share with friends and family.</li>
+                    <li>**Versatile:** Looks great in hanging baskets, on shelves, or as a tabletop plant.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

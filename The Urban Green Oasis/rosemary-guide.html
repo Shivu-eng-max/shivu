@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rosemary Guide - The Urban Green Oasis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Body and Container Styles (copied for consistency) */
+        body { font-family: 'Montserrat', sans-serif; line-height: 1.6; color: #333; background-color: #f7fdf7; }
+        .container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+        .section-padding { padding: 80px 0; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: #283618; margin-bottom: 0.5em; }
+        h1 { font-size: 3em; text-align: center; margin-bottom: 40px; }
+        h2 { font-size: 2em; margin-top: 40px; }
+        p { margin-bottom: 1em; }
+        ul { list-style: disc; margin-left: 20px; margin-bottom: 1em; }
+        ol { list-style: decimal; margin-left: 20px; margin-bottom: 1em; }
+        .plant-hero {
+            background: url('https://via.placeholder.com/1200x400/588157/ffffff?text=Rosemary+Plant') no-repeat center center/cover;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            position: relative;
+        }
+        .plant-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+        }
+        .plant-hero h1 {
+            color: #fff;
+            font-size: 3.5em;
+            position: relative;
+            z-index: 1;
+        }
+        .guide-section {
+            padding: 40px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .guide-section:last-of-type {
+            border-bottom: none;
+        }
+        .key-facts {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+            background-color: #e0e9e4;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .key-fact-item {
+            flex: 1 1 180px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .key-fact-item i {
+            font-size: 2em;
+            color: #3a5a40;
+            margin-bottom: 10px;
+        }
+        .key-fact-item h4 {
+            color: #3a5a40;
+            margin-bottom: 5px;
+        }
+        .main-header { /* Copy header styles as needed */
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .main-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo a {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            color: #283618;
+        }
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+        }
+        .main-nav li {
+            margin-left: 30px;
+        }
+        .main-nav a {
+            font-weight: 600;
+            color: #606c38;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #3a5a40;
+            left: 0;
+            bottom: 0;
+            transition: width 0.3s ease;
+        }
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+        .main-footer {
+            background-color: #283618;
+            color: #e0e9e4;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.85em;
+            color: #a3b18a;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .plant-hero h1 { font-size: 2.5em; }
+            h1 { font-size: 2.5em; }
+            .key-facts { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">The Urban Green Oasis</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html#guides">Plant Guides</a></li>
+                    <li><a href="index.html#diy">DIY Projects</a></li>
+                    <li><a href="index.html#community">Community</a></li>
+                    <li><a href="index.html#shop">Shop</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="plant-hero" style="background-image: url('https://via.placeholder.com/1200x400/588157/ffffff?text=Rosemary+Plant');">
+            <h1>Rosemary Guide</h1>
+        </section>
+
+        <div class="container section-padding">
+            <div class="key-facts">
+                <div class="key-fact-item">
+                    <i class="fas fa-sun"></i>
+                    <h4>Light Needs</h4>
+                    <p>Full Sun (6-8+ hours direct light)</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tint"></i>
+                    <h4>Watering</h4>
+                    <p>Moderate to Low (Drought Tolerant once established)</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Difficulty</h4>
+                    <p>Easy to Moderate</p>
+                </div>
+                <div class="key-fact-item">
+                    <i class="fas fa-tree"></i>
+                    <h4>Growth Habit</h4>
+                    <p>Bushy Herb</p>
+                </div>
+            </div>
+
+            <section class="guide-section">
+                <h2>1. Introduction to Rosemary</h2>
+                <p>Rosemary (Rosmarinus officinalis, now Salvia rosmarinus) is a wonderfully fragrant evergreen herb native to the Mediterranean region. Known for its needle-like leaves and woody stems, it's a staple in many cuisines and also highly valued for its aromatic and ornamental qualities. Growing rosemary in urban settings, especially on balconies, can provide fresh herbs and a pleasant aroma.</p>
+                <p>It's a relatively hardy plant, but it does have specific preferences for light and drainage.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>2. Planting and Potting</h2>
+                <h3>Choosing the Right Pot:</h3>
+                <ul>
+                    <li>Select a pot that is at least 10-12 inches in diameter and depth. Rosemary can grow quite large, and a bigger pot provides more stable conditions.</li>
+                    <li>Terracotta pots are excellent as they promote good air circulation and allow the soil to dry out faster, which rosemary prefers.</li>
+                    <li>**Essential: Ensure the pot has excellent drainage holes.**</li>
+                </ul>
+                <h3>Soil Requirements:</h3>
+                <ul>
+                    <li>Rosemary thrives in well-draining, sandy-loam soil. It dislikes heavy, water-retentive soils.</li>
+                    <li>Use a good quality potting mix designed for herbs or succulents, or amend a standard potting mix with perlite or coarse sand to improve drainage.</li>
+                    <li>A slightly acidic to neutral pH (6.0-7.0) is ideal.</li>
+                </ul>
+                <h3>Planting Process:</h3>
+                <ol>
+                    <li>If planting from a nursery pot, gently remove the plant, taking care not to damage the root ball.</li>
+                    <li>Place a layer of well-draining soil at the bottom of your chosen pot, center the rosemary, and backfill with soil, ensuring the plant sits at the same depth as it was in its original container.</li>
+                    <li>Water lightly after potting.</li>
+                </ol>
+            </section>
+
+            <section class="guide-section">
+                <h2>3. Essential Care & Maintenance</h2>
+                <h3>Watering:</h3>
+                <p>Rosemary is drought-tolerant once established. It prefers the soil to dry out between waterings. Water thoroughly until water drains from the bottom, then wait until the top 2-3 inches of soil are completely dry before watering again. Overwatering is a common cause of rosemary decline.</p>
+                <h3>Light:</h3>
+                <p>**Full sun is crucial for rosemary.** It needs at least 6-8 hours of direct sunlight per day to thrive and develop its full aroma. Place it in the sunniest spot on your balcony or terrace.</p>
+                <h3>Temperature & Humidity:</h3>
+                <p>Rosemary prefers warm, dry conditions and good air circulation. It can tolerate some cold but protect it from hard frosts. It generally dislikes high humidity.</p>
+                <h3>Fertilizing:</h3>
+                <p>Rosemary is not a heavy feeder. Fertilize sparingly, perhaps once in spring, with a balanced, slow-release granular fertilizer or a liquid fertilizer diluted to half strength. Too much fertilizer can reduce its aromatic oils.</p>
+                <h3>Pruning & Harvesting:</h3>
+                <p>Regular pruning encourages bushier growth and provides fresh herbs. You can harvest sprigs as needed, making sure not to remove more than one-third of the plant at once. Pruning woody stems can be done in early spring to shape the plant. Avoid pruning too hard into old wood.</p>
+                <h3>Pest and Disease Management:</h3>
+                <p>Generally robust. Watch for powdery mildew in humid conditions (ensure good air circulation). Root rot is the primary concern, caused by overwatering. Occasionally, aphids or spider mites may appear; rinse them off with water or use an organic insecticidal soap.</p>
+            </section>
+
+            <section class="guide-section">
+                <h2>4. Propagation & Uses</h2>
+                <h3>Propagation:</h3>
+                <p>Rosemary is most easily propagated from semi-hardwood cuttings taken in late spring or early summer. Dip the cut end in rooting hormone (optional) and plant in moist, well-draining potting mix, or place in water until roots form.</p>
+                <h3>Uses:</h3>
+                <ul>
+                    <li>**Culinary:** Widely used in Mediterranean dishes, roasted meats, potatoes, and bread.</li>
+                    <li>**Aromatherapy:** The essential oil is used for its stimulating and invigorating properties.</li>
+                    <li>**Repellent:** Its strong aroma can help deter some common garden pests.</li>
+                    <li>**Ornamental:** Can be pruned into various shapes and makes an attractive addition to herb gardens or as a standalone plant.</li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Urban Green Oasis. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
